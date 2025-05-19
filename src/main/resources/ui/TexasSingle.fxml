@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.TexasSingleController">
+   <children>
+      <HBox fx:id="communityCardsBox" alignment="CENTER" layoutX="105.0" layoutY="41.0" prefHeight="110.0" prefWidth="395.0" style="-fx-border-color: black; -fx-background-color: green;">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="105.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="105.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="105.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="105.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <Label layoutX="183.0" layoutY="14.0" text="Texas Holdem - Single PLayer">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="186.0" prefHeight="200.0" prefWidth="132.0">
+         <children>
+            <Label fx:id="playerNameLabel" alignment="TOP_CENTER" text="Label" />
+            <Label fx:id="playerChipsLabel" alignment="TOP_CENTER" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Label" />
+            <HBox fx:id="playerCardsBox" alignment="CENTER" prefHeight="110.0" prefWidth="118.0">
+               <children>
+                  <ImageView fitHeight="110.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="110.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="potLabel" layoutX="525.0" layoutY="41.0" text="Label" />
+      <HBox layoutX="155.0" layoutY="275.0" prefHeight="64.0" prefWidth="210.0">
+         <children>
+            <Button fx:id="betButton" mnemonicParsing="false" onAction="#onBetClicked" prefHeight="64.0" prefWidth="110.0" text="Bet" />
+            <Button fx:id="foldButton" mnemonicParsing="false" onAction="#onFoldClicked" prefHeight="64.0" prefWidth="110.0" text="Fold" />
+         </children>
+      </HBox>
+      <TextField fx:id="betAmountField" layoutX="183.0" layoutY="347.0" prefHeight="25.0" prefWidth="125.0" />
+      <Button fx:id="nextStageButton" layoutX="379.0" layoutY="287.0" mnemonicParsing="false" onAction="#onNextStageClicked" prefHeight="41.0" prefWidth="92.0" text="Next Stage" />
+      <Button fx:id="resetButton" layoutX="379.0" layoutY="347.0" mnemonicParsing="false" onAction="#onResetClicked" prefHeight="25.0" prefWidth="92.0" text="New Round" />
+      <Label fx:id="bot1Label" layoutX="169.0" layoutY="178.0" text="Bot1: 100 chips" />
+      <Label fx:id="bot2Label" layoutX="308.0" layoutY="178.0" text="Bot2: 100 chips" />
+   </children>
+</AnchorPane>
